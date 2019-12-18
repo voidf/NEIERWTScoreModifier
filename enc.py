@@ -367,21 +367,21 @@ def dec(iStr):
 	return oStr
 
 	
-
-while 1:
-	try:
-		ipt=input("NEIEcoder>")
+if __name__ == "__main__":
+	while 1:
 		try:
-			for jj in ipt.split("  "):
-				print(dec(jj))
-		except:
-			if len(ipt)==32:
-				print(dec(ipt))
-			else:
-				print(enc(ipt))
-	except KeyboardInterrupt:
-		break
-	# except Exception as e:
-	# 	print(e)
+			ipt=input("NEIEcoder>")
+			try:
+				for jj in ipt.split("  "):
+					print(dec(jj))
+			except:
+				if len(ipt)==32:
+					print(dec(ipt))
+				else:
+					print(enc(ipt))
+		except KeyboardInterrupt:
+			break
+		# except Exception as e:
+		# 	print(e)
 
-#print(enc("80"))
+	#print(enc("80"))
